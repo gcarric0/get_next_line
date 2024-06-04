@@ -6,7 +6,7 @@
 /*   By: gcarrico <gcarrico@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 13:42:04 by gcarrico          #+#    #+#             */
-/*   Updated: 2024/05/29 16:03:53 by gcarrico         ###   ########.fr       */
+/*   Updated: 2024/06/04 18:40:36 by gcarrico         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,4 +78,22 @@ int	ft_strlen(const char *str)
 	while (str[len])
 		len++;
 	return (len);
+}
+
+char  *ft_strchr(int c, const char *str)
+{
+	unsigned int i;
+	unsigned char chtr;
+
+	chtr = (char)c ;
+	i = 0;
+	while(str[i])
+	{
+		if(str[i] == c)
+			return((char *)&str[i]);
+		i++;
+	}
+	if(str[i] == chtr)
+		return ((char *)&str[i]);
+	return(NULL);
 }
